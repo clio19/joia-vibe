@@ -35,18 +35,100 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+## URLS
 
-# STEPS 
+``` bash
+    https://nextjs.org/docs
+    https://ui.shadcn.com/docs/installation/next
+    https://neon.com/
+   
+```
 
-https://nextjs.org/docs
-https://ui.shadcn.com/docs/installation/next
-##  First steps 
- - npx create-next-app@15.3.4 
- - npx shadcn@latest --version   
- - npx shadcn@2.7.0 init   
- - npx shadcn@2.7.0 add button
- - npm run dev
+# STEPS
 
-Instalar Tailwind CCS intellisense package
+## First steps
 
- -  npx shadcn@2.7.0 add --all
+- npx create-next-app@15.3.4
+- npx shadcn@latest --version
+- npx shadcn@2.7.0 init
+- npx shadcn@2.7.0 add button
+- npm run dev
+
+# Install plugins on vscode 👍
+
+- Tailwind CCS intellisense package
+- prisma
+
+- npx shadcn@2.7.0 add --all
+
+# Prisma  <https://www.prisma.io/docs/guides/nextjs>
+
+- npm install prisma tsx --save-dev
+- npm install @prisma/client dotenv
+- npx prisma init
+
+## Environment Setup
+
+1. Create a `.env` file in the project root if it doesn't exist already
+2. Add your database connection URL to the `.env` file:
+
+   ```properties
+   DATABASE_URL="postgresql://<user>:<password>@<host>:<port>/<database>?sslmode=require"
+   ```
+
+   For Neon database users:
+   1. Go to the [Neon Console](https://neon.com)
+   2. Select your project
+   3. Click on "Connection Details"
+   4. Copy the connection string and paste it as your DATABASE_URL
+
+## Local Development
+
+After setting up your environment:
+
+1. Generate the Prisma Client:
+
+   ```bash
+   npx prisma generate
+   ```
+
+2. Push the schema to your database (development only):
+
+   ```bash
+   npx prisma db push
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+Note: Never commit your `.env` file to version control. It's already added to `.gitignore` to prevent accidental commits.
+
+# Migrate db
+
+   ```bash
+   npx prisma migrate dev
+   ```
+
+   OU
+
+   ```bash
+   npx prisma studio 
+   ```
+
+# NO FINAL
+
+Apagar os seed.ts e as pastas das migracoes e remover o  
+
+ "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  
+   na package,json
+  
+   ```bash
+   npx prisma migrate reset
+   ```
+
