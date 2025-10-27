@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
 
-export const Page = () => {
+export const Page = async () => {
   return (
   <>
-   <Button variant="new">
-    Click Me
-    </Button>
-    Welcome to the Home Page
+    <h1>Users</h1>
+    <div>
+      Hello
+    </div>
     </>
 );
 
