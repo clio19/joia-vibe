@@ -41,6 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
     https://nextjs.org/docs
     https://ui.shadcn.com/docs/installation/next
     https://neon.com/
+    https://trpc.io/
    
 ```
 
@@ -132,3 +133,4 @@ Apagar os seed.ts e as pastas das migracoes e remover o
    npx prisma migrate reset
    ```
 
+# TRPC https://trpc.io/docs/client/tanstack-react-query
