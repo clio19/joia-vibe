@@ -38,10 +38,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## URLS
 
 ``` bash
-    https://nextjs.org/docs
-    https://ui.shadcn.com/docs/installation/next
-    https://neon.com/
-    https://trpc.io/
+    https://nextjs.org/docs 
+    https://ui.shadcn.com/docs/installation/next # Css components
+    https://neon.com/ # DB
+    https://trpc.io/ # RPC calls
+    https://www.coderabbit.ai/ # For code review
+    https://www.inngest.com/ # auto-scale queues
    
 ```
 
