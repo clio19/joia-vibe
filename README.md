@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+# STEPS 
+
+https://nextjs.org/docs
+https://ui.shadcn.com/docs/installation/next
+##  First steps 
+ - npx create-next-app@15.3.4 
+ - npx shadcn@latest --version   
+ - npx shadcn@2.7.0 init   
+ - npx shadcn@2.7.0 add button
+ - npm run dev
+
+Instalar Tailwind CCS intellisense package
+
+ -  npx shadcn@2.7.0 add --all
