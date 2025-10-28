@@ -112,8 +112,8 @@ Note: Never commit your `.env` file to version control. It's already added to `.
 
 # Migrate db
 
-   ```bash
    npx prisma migrate dev
+   ```bash
    ```
 
    OU
@@ -136,4 +136,10 @@ Apagar os seed.ts e as pastas das migracoes e remover o
    npx prisma migrate reset
    ```
 
-# TRPC https://trpc.io/docs/client/tanstack-react-query
+TRPC https://trpc.io/docs/client/tanstack-react-query
+
+  ## Run inngest page
+
+```
+ npx inngest-cli@latest dev
+```

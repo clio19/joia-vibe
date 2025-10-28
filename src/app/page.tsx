@@ -22,7 +22,7 @@ export const Page = () => {
   <div className="p-4 max-w-7xl">
   
     <Input value={value} onChange={(e) => setValue(e.target.value)} />
-    <Button disabled={invoke.isPending} onClick={() => invoke.mutate({ value: value})}>
+    <Button disabled={invoke.isPending} onClick={() => invoke.mutate({ value})}>
       Invoke Background job
     </Button>
   </div>
