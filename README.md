@@ -44,6 +44,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
     https://trpc.io/ # RPC calls
     https://www.coderabbit.ai/ # For code review
     https://www.inngest.com/ # auto-scale queues
+    https://agentkit.inngest.com/concepts/models # Chat models
    
 ```
 
