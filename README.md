@@ -45,7 +45,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
     https://www.coderabbit.ai/ # For code review
     https://www.inngest.com/ # auto-scale queues
     https://agentkit.inngest.com/concepts/models # Chat models
-   
+    https://e2b.dev/ #  Sandboxes https://e2b.dev/docs https://e2b.dev/docs/sdk-reference/cli/v2.3.3/auth#e2b-auth
 ```
 
 # STEPS
@@ -112,9 +112,9 @@ Note: Never commit your `.env` file to version control. It's already added to `.
 
 # Migrate db
 
+```bash
    npx prisma migrate dev
-   ```bash
-   ```
+ ```
 
    OU
 
@@ -138,8 +138,56 @@ Apagar os seed.ts e as pastas das migracoes e remover o
 
 TRPC https://trpc.io/docs/client/tanstack-react-query
 
-  ## Run inngest page
+## Run inngest page
+
+``` bash
+  npx inngest-cli@latest dev
+```
+
+# E2B
+
+```bash
+npm i -g  @e2b/cli
+```
+
+```bash
+e2b auth login
+```
+
+```bash
+ e2b template build --name vibe-nextjs-test
+```
+
+```bash
+ e2b template build --name vibe-nextjs-test-2 --cmd compile_page.sh  
+```
+
+# For version 2 
+
+```bash
+ e2b template migrate
+```
+
+```bash
+cd .\sandbox-templates\nextjs
+e2b auth login
+e2b template build --name vibe-nextjs-<yourname>-$(Get-Date -Format yyyyMMddHHmm) --cmd compile_page.sh
+OR
+ e2b template build --name vibe-nextjs-<yourname> --cmd "/compile_page.sh"
+```
+
+OR
+
+```bash
+cd sandbox-templates/nextjs; e2b template build --name vibe-nextjs-clio19-$(Get-Date -Format yyyyMMddHHmm) --cmd compile_page.sh
+```
+
+```bash
+e2b template publish -t <TEAM_ID>
 
 ```
- npx inngest-cli@latest dev
+
+Install n2b interpreter
+```bash
+ npm i @e2b/code-interpreter
 ```

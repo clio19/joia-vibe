@@ -41,3 +41,10 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+sandbox-templates/nextjs/build.dev.ts
+sandbox-templates/nextjs/build.prod.ts
+sandbox-templates/nextjs/compile_page.sh
+sandbox-templates/nextjs/e2b.Dockerfile
+sandbox-templates/nextjs/e2b.Dockerfile.old
+sandbox-templates/nextjs/e2b.toml
+sandbox-templates/nextjs/template.ts
