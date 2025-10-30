@@ -1,6 +1,8 @@
 import { openai, createAgent, createTool, createNetwork } from "@inngest/agent-kit";
 import { inngest } from "./client";
 import { getSandbox, lastAssistantTextMessageContent } from "./utils";
+import { PROMPT } from "../prompt";
+
 import Sandbox from "@e2b/code-interpreter";
 import z from "zod";
 
@@ -10,14 +12,14 @@ export const helloWorld = inngest.createFunction(
   { event: "test/hello.world" },
   async ({ event, step }) => {
     const sandboxId = await step.run("get-sandbox-id", async () => {
-      const sandbox = await Sandbox.create("vibe-nextjs-clio19-202510281737");
+      const sandbox = await Sandbox.create("vibe-nextjs-htrix");
       return sandbox.sandboxId;
     });
 
     // Create a new agent with a system prompt (you can add optional tools, too)
     const codeAgent = createAgent({
       name: "code-agent",
-      system: "An expert coding agent.",
+      system: PROMPT,
       model: openai({ 
         model: "gpt-5-nano",
         //  defaultParameters: {
@@ -72,7 +74,7 @@ export const helloWorld = inngest.createFunction(
                   await sandbox.files.write(file.path, file.content);
                   updatedFiles[file.path] = file.content;
                 }
-                return
+                return updatedFiles;
               } catch (error) {
                 return `Failed to create or update files: ${error}`;
               }
@@ -117,7 +119,7 @@ export const helloWorld = inngest.createFunction(
           }
           
           return result;
-        }
+        },
       },
     });
 
